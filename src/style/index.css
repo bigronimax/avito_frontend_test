@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto my-0 h-[100%] max-w-[1600px] px-[10%];
+  }
+}
+
+@layer components {
+  .filter-arrow::after {
+    content: "";
+    @apply absolute right-[16px] top-1/2 block h-[6px] w-[6px] border-b-2 border-r-2 border-black-text transition-transform duration-300;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .filter-arrow.active::after {
+    transform: translateY(-50%) rotate(225deg);
+  }
+}

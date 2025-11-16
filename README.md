@@ -1,1 +1,0 @@
-# avito_frontend_test

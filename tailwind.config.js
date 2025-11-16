@@ -1,0 +1,42 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        blue: "#0468FF",
+        "blue-hover": "#055DE1",
+        grey: "#737A8E",
+        "grey-2": "#E9E9E9",
+        "grey-3": "#F4F4F4",
+        "grey-4": "#E4E4E4",
+        white: "#FFFFFF",
+        "black-text": "#152242",
+        bluish: "#E6F0FF",
+        "bluish-hover": "#D9E8FF",
+        "darker-blue": "#0661EC",
+        "blue-shadow": "#68A4FF",
+        "light-grey": "#C9D1E5",
+        milk: "#FFE9EB",
+        black: "#131313",
+        red: "#D1152C",
+        "red-darker": "#DB1F36",
+        "blue-link": "#2B87DB",
+        "blue-link-hover": "#1A62A6",
+        "profile-color-text": "#121212",
+        "btn-bg-2": "#E6F0FF",
+        orange: "#FFA800",
+        green: "#2EA71E",
+      }
+    }
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".transition-width-opacity-custom": {
+          transition: "width 0.3s ease-in-out, opacity 0.3s ease-in-out 0.3s",
+        },
+      });
+    },
+  ],
+};
